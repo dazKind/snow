@@ -57,8 +57,10 @@ class Runtime implements snow.core.Runtime {
             prevent_default_mouse_wheel : true,
             prevent_default_touches : true,
             prevent_default_keys : [
+            /*
                 Key.left, Key.right, Key.up, Key.down,
                 Key.backspace, Key.tab, Key.delete, Key.space
+            */
             ]
         };
 
@@ -586,10 +588,10 @@ class Runtime implements snow.core.Runtime {
             //These are in css device pixels
         window_w = config.width;
         window_h = config.height;
-        window.style.width = config.width+'px';
-        window.style.height = config.height+'px';
+        //window.style.width = config.width+'px';
+        //window.style.height = config.height+'px';
             //This is typically required for our WebGL blending
-        window.style.background = '#000';
+        //window.style.background = '#000';
 
         _debug('created window at ${window_x},${window_y} - ${window.width}x${window.height} pixels (${config.width}x${config.height}@${window_dpr}x)');
 
